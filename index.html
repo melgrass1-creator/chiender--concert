@@ -1,0 +1,1705 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026成德菁英幼兒園─時空之旅</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {margin:0;font-family:"Noto Sans TC", sans-serif;background:#0b1a3a;color:#333;overflow-x:hidden;}
+
+    header {position:fixed;top:0;width:100%;background:rgba(11,26,58,0.92);color:#fff;z-index:10;backdrop-filter:blur(10px);}
+    .header-inner {display:flex;align-items:center;justify-content:space-between;gap:24px;max-width:1180px;width:calc(100% - 48px);margin:0 auto;padding:12px 0;}
+    header .logo {display:flex;align-items:center;gap:0;height:auto;transform:translateX(24px);}
+    header .logo a {display:flex;align-items:center;margin:0;}
+    header .logo img {height:50px;width:auto;max-width:200px;object-fit:contain;flex-shrink:0;}
+    header .brand {font-size:1rem;font-weight:700;letter-spacing:1px;white-space:nowrap;display:block;}
+    header a {color:#fff;margin:0 10px;text-decoration:none;font-weight:600;font-size:0.95rem;}
+    header nav {display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+
+    .hero {
+      min-height:100vh;
+      box-sizing:border-box;
+      background:#07142f url('images/web2.png') center top/cover no-repeat;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      position:relative;
+      color:white;
+      padding:84px 0 42px;
+      margin-top:0;
+      overflow:hidden;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;top:0;left:0;width:100%;height:100%;
+      background:
+        linear-gradient(180deg, rgba(6,17,57,0.52) 0%, rgba(6,17,57,0.16) 30%, rgba(6,17,57,0) 58%, rgba(6,17,57,0.24) 100%),
+        linear-gradient(90deg, rgba(6,17,57,0.34) 0%, rgba(6,17,57,0.08) 36%, rgba(6,17,57,0) 72%);
+      pointer-events:none;
+    }
+
+    .hero-content{position:relative;z-index:1;display:flex;justify-content:center;max-width:1220px;width:100%;box-sizing:border-box;margin:0 auto;padding:112px 32px 0;transform:translateX(44px);}
+
+    .hero-title {
+      text-align:center;
+      width:min(780px, 100%);
+      box-sizing:border-box;
+      padding:16px 36px 18px;
+      border-top:1px solid rgba(255,217,102,0.58);
+      border-bottom:1px solid rgba(255,255,255,0.28);
+      background:linear-gradient(90deg, rgba(7,20,47,0), rgba(7,20,47,0.34) 22%, rgba(7,20,47,0.34) 78%, rgba(7,20,47,0));
+      text-shadow:0 8px 24px rgba(0,0,0,0.42);
+    }
+    .hero-title .eyebrow {display:inline-block;padding:0 18px;color:#ffd966;font-size:47px;margin-bottom:8px;font-family:"Noto Serif TC", serif;letter-spacing:0;}
+    .hero-title h1 {font-size:58px;line-height:1.3;margin:0;color:#fff7d7;text-shadow:0 4px 0 rgba(87,50,15,0.35), 0 14px 34px rgba(0,0,0,0.5);font-family:"Noto Serif TC", serif;font-weight:700;}
+    .hero-title p {font-size:18px;margin:14px 0 0;color:rgba(255,255,255,0.94);line-height:1.65;text-align:center;}
+
+    .hero-card {
+      background:rgba(255,255,255,0.9);
+      border-radius:32px;
+      padding:32px;
+      box-shadow:0 28px 70px rgba(0,0,0,0.22);
+      border:1px solid rgba(255,255,255,0.45);
+      color:#1b1b1b;
+    }
+
+    .hero-card h3 {font-size:1.1rem;margin-bottom:10px;color:#0c2340;}
+    .hero-card p {margin:0 0 16px;font-size:1rem;line-height:1.75;color:#404040;}
+    .hero-card .badge {display:inline-flex;align-items:center;gap:8px;background:#f3f4ff;color:#1a237e;padding:10px 14px;border-radius:18px;font-weight:700;margin-bottom:20px;}
+
+    .hero-actions {display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;}
+    .hero-actions .btn {min-width:150px;}
+    .btn {margin:0;padding:14px 28px;border-radius:28px;border:none;cursor:pointer;font-size:15px;transition:0.25s ease;}
+    .btn:hover{transform:translateY(-2px);}
+
+    .btn-orange {background:#ff8a00;color:#fff;}
+    .btn-blue {background:#3b82f6;color:#fff;}
+    .btn-green {background:#4caf50;color:#fff;}
+    .btn-light {background:rgba(255,255,255,0.95);color:#0c2340;}
+
+    .header-btn {display:inline-block;margin:0;padding:10px 18px;border-radius:24px;background:#ff8a00;color:#fff;text-decoration:none;font-weight:700;font-size:15px;line-height:1.2;white-space:nowrap;flex-shrink:0;transition:0.3s;}
+    .header-btn:hover{transform:scale(1.05);}
+
+    .quick-links {display:grid;grid-template-columns:repeat(5, 212px);gap:12px;width:1128px;box-sizing:border-box;margin:18px auto 0;padding:10px;position:relative;z-index:1;transform:translateX(44px);background:rgba(6,17,57,0.42);border:1px solid rgba(255,217,102,0.34);border-radius:20px;box-shadow:0 22px 58px rgba(0,0,0,0.2);backdrop-filter:blur(10px);}
+    .quick-card {display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;align-items:center;column-gap:13px;min-height:74px;background:rgba(255,255,255,0.12);border-radius:14px;padding:15px 17px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.16);color:#fff;text-decoration:none;transition:transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;}
+    .quick-card:hover {transform:translateY(-3px);background:rgba(255,255,255,0.22);box-shadow:0 14px 30px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.22);}
+    .quick-icon {grid-row:1 / span 2;width:48px;height:48px;border-radius:50%;background:linear-gradient(180deg, #ffe07a, #d79a28);color:#07142f;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:0;box-shadow:0 8px 18px rgba(0,0,0,0.22);}
+    .quick-card strong {display:block;font-size:1.1rem;margin-bottom:3px;color:#fff7d7;}
+    .quick-card span {font-size:0.92rem;color:rgba(255,255,255,0.82);line-height:1.45;text-align:left;}
+    .quick-card .quick-desc {display:flex;flex-direction:column;gap:1px;}
+    .quick-card .quick-desc span {display:block;white-space:nowrap;}
+    .quick-card .quick-desc .desc-sub {font-size:0.86rem;color:rgba(255,255,255,0.68);}
+
+    .section {padding:70px 32px;text-align:center;background:#f5f5f5;}
+    .btn:hover{transform:scale(1.1);}    
+    .btn-orange {background:#ff8a00;color:#fff;}
+    .btn-blue {background:#3b82f6;color:#fff;}
+    .header-btn {display:inline-block;margin:0;padding:10px 18px;border-radius:24px;background:#ff8a00;color:#fff;text-decoration:none;font-weight:700;font-size:15px;line-height:1.2;white-space:nowrap;flex-shrink:0;transition:0.3s;}
+    .header-btn:hover{transform:scale(1.05);}
+
+    .section {padding:70px 20px;text-align:center;background:#f5f5f5;}
+
+    #ticket {
+      padding-top:38px;
+      padding-bottom:32px;
+    }
+
+    #rules {
+      padding-top:28px;
+      padding-bottom:32px;
+    }
+
+    #qa {
+      padding-top:28px;
+      padding-bottom:26px;
+    }
+
+    footer.section {
+      padding-top:20px;
+    }
+
+    #program > h2,
+    #ticket h2,
+    #rules .panel h2,
+    #qa .panel h2 {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:16px;
+      width:min(100%, 1180px);
+      margin:0 auto 28px;
+      padding:0 18px 18px;
+      box-sizing:border-box;
+      border-bottom:1px solid rgba(194,151,58,0.35);
+      color:#0b1a3a;
+      font-family:"Noto Serif TC", serif;
+      font-size:40px;
+      line-height:1.25;
+      letter-spacing:0;
+      text-align:center;
+      text-shadow:0 1px 0 rgba(255,255,255,0.9);
+    }
+
+    #program > h2::before,
+    #program > h2::after,
+    #ticket h2::before,
+    #ticket h2::after,
+    #rules .panel h2::before,
+    #rules .panel h2::after,
+    #qa .panel h2::before,
+    #qa .panel h2::after {
+      content:"";
+      width:48px;
+      height:1px;
+      border-radius:999px;
+      background:linear-gradient(90deg, transparent, #c2973a, transparent);
+      flex:0 0 auto;
+    }
+
+    .media-grid {
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:24px;
+      align-items:start;
+      width:min(100%, 1180px);
+      margin:0 auto;
+    }
+
+    .media-card {
+      padding:20px;
+      box-sizing:border-box;
+      border:1px solid rgba(194,151,58,0.22);
+      border-radius:24px;
+      background:linear-gradient(180deg, #fffdf8 0%, #ffffff 100%);
+      box-shadow:0 16px 38px rgba(20,28,46,0.1);
+    }
+
+    .media-card h3 {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      margin:0 0 16px;
+      color:#13213b;
+      font-family:"Noto Serif TC", serif;
+      font-size:28px;
+      line-height:1.25;
+    }
+
+    .media-card h3::before,
+    .media-card h3::after {
+      content:"";
+      width:34px;
+      height:1px;
+      background:#c2973a;
+      flex:0 0 auto;
+      opacity:0.75;
+    }
+
+    .program-frame,
+    .seating-frame {
+      width:100%;
+      margin:0;
+      padding:12px;
+      box-sizing:border-box;
+      border:1px solid rgba(194,151,58,0.22);
+      border-radius:20px;
+      background:linear-gradient(180deg, #ffffff 0%, #fffaf0 100%);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,0.9);
+    }
+
+    .program-frame img,
+    .seating-frame img {
+      display:block;
+      width:100%;
+      height:auto;
+      padding:8px;
+      box-sizing:border-box;
+      border:1px solid rgba(19,33,59,0.08);
+      border-radius:14px;
+      background:#ffffff;
+      object-fit:contain;
+    }
+
+    .program-frame img,
+    .seating-frame img {
+      cursor:zoom-in;
+    }
+
+    #info {
+      background:linear-gradient(180deg, #fffaf0 0%, #f2f5fb 100%);
+      padding:76px 24px 84px;
+    }
+
+    .event-grid {
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:24px;
+      align-items:stretch;
+      max-width:1180px;
+      margin:0 auto;
+    }
+
+    .event-tile {
+      position:relative;
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      min-height:360px;
+      height:100%;
+      box-sizing:border-box;
+      padding:34px 32px;
+      border-radius:20px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.95), rgba(255,255,255,0.82)),
+        radial-gradient(circle at 18% 12%, rgba(255,217,102,0.34), transparent 36%);
+      border:1px solid rgba(194,151,58,0.24);
+      box-shadow:0 22px 54px rgba(35,42,68,0.14), inset 0 1px 0 rgba(255,255,255,0.88);
+      color:#182033;
+      text-align:left;
+    }
+
+    .event-tile::before {
+      content:"";
+      position:absolute;
+      inset:14px;
+      border:1px solid rgba(194,151,58,0.18);
+      border-radius:14px;
+      pointer-events:none;
+    }
+
+    .event-kicker {
+      position:relative;
+      z-index:1;
+      display:inline-flex;
+      align-items:center;
+      width:max-content;
+      margin:0 0 14px;
+      padding:6px 12px;
+      border-radius:999px;
+      background:#13213b;
+      color:#fff7d7;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:0;
+    }
+
+    .event-tile h2 {
+      position:relative;
+      z-index:1;
+      margin:0 0 20px;
+      font-size:36px;
+      line-height:1.15;
+      color:#111827;
+      font-family:"Noto Serif TC", serif;
+      letter-spacing:0;
+    }
+
+    .event-list {
+      position:relative;
+      z-index:1;
+      display:grid;
+      gap:14px;
+      margin:0;
+    }
+
+    .event-line {
+      display:grid;
+      grid-template-columns:30px 1fr;
+      gap:10px;
+      align-items:start;
+      color:#384152;
+      font-size:16px;
+      line-height:1.65;
+      text-align:left;
+    }
+
+    .event-icon {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:30px;
+      height:30px;
+      border-radius:10px;
+      background:#f7f0df;
+      box-shadow:inset 0 0 0 1px rgba(194,151,58,0.2);
+      font-size:16px;
+      line-height:1;
+    }
+
+    .event-text {
+      padding-top:2px;
+    }
+
+    .event-text strong {
+      display:block;
+      margin-bottom:2px;
+      color:#111827;
+      font-size:17px;
+    }
+
+    .event-text .parking-line {
+      display:block;
+      white-space:nowrap;
+    }
+
+    .event-text strong.parking-name {
+      display:block;
+      margin-bottom:0;
+      white-space:nowrap;
+    }
+
+    .event-tile:first-child .event-line {
+      font-size:15px;
+      line-height:1.55;
+    }
+
+    .event-tile:nth-child(2) {
+      padding:26px;
+    }
+
+    .event-tile:nth-child(2) .event-line {
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    .event-tile:nth-child(2) .event-list {
+      gap:9px;
+    }
+
+    .event-tile:nth-child(2) .event-text strong {
+      font-size:15px;
+    }
+
+    .event-map {
+      padding:0;
+      justify-content:stretch;
+      background:#fff;
+    }
+
+    .event-map iframe {
+      position:absolute;
+      inset:0;
+      z-index:0;
+      width:100%;
+      height:100%;
+      border:0;
+      border-radius:20px;
+    }
+
+    .event-map-label {
+      position:absolute;
+      left:18px;
+      right:18px;
+      bottom:18px;
+      z-index:1;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(19,33,59,0.92);
+      color:#fff;
+      text-align:left;
+      box-shadow:0 14px 34px rgba(0,0,0,0.22);
+      backdrop-filter:blur(8px);
+    }
+
+    .event-map-label strong {
+      display:block;
+      margin-bottom:3px;
+      color:#fff7d7;
+      font-size:18px;
+    }
+
+    .event-map-label span {
+      display:block;
+      color:rgba(255,255,255,0.86);
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    #rules .panel h2,
+    #rules .panel p {
+      text-align:center;
+    }
+
+    .info-grid {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:30px;
+      margin-top:40px;
+    }
+
+    .panel {
+      flex:1 1 420px;
+      box-sizing:border-box;
+      max-width:1180px;
+      width:100%;
+      margin:0 auto;
+      background:#ffffff;
+      color:#1a1a1a;
+      text-align:left;
+      padding:48px;
+      border-radius:28px;
+      box-shadow:0 24px 70px rgba(0,0,0,0.14);
+      border:1px solid rgba(0,0,0,0.08);
+      min-width:0;
+      overflow:hidden;
+    }
+
+    .panel h2 {
+      font-size:36px;
+      margin-bottom:24px;
+      letter-spacing:0.8px;
+      color:#111;
+    }
+
+    .panel p {
+      color:#555;
+      font-size:17px;
+      margin-bottom:22px;
+      line-height:1.8;
+    }
+
+    .rules-list {
+      list-style:decimal inside;
+      font-size:16px;
+      color:#333;
+      line-height:2;
+      padding-left:0;
+      margin:0;
+    }
+
+    .rules-list li {
+      padding:16px 0;
+      border-bottom:1px solid rgba(0,0,0,0.06);
+    }
+
+    .rules-list li:last-child {
+      border-bottom:none;
+    }
+
+    .qa-list {
+      display:grid;
+      gap:18px;
+      margin:0;
+      font-size:16px;
+      color:#333;
+      overflow-wrap:anywhere;
+      word-break:break-word;
+    }
+
+    .qa-category {
+      overflow:hidden;
+      border:1px solid rgba(194,151,58,0.2);
+      border-radius:20px;
+      background:linear-gradient(180deg, #fffdf7, #ffffff);
+      box-shadow:0 14px 34px rgba(35,42,68,0.08);
+    }
+
+    .qa-category-title {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:18px 22px;
+      background:#13213b;
+      color:#fff7d7;
+      font-size:20px;
+      font-weight:700;
+      font-family:"Noto Serif TC", serif;
+    }
+
+    .qa-category-title span {
+      color:rgba(255,255,255,0.72);
+      font-size:14px;
+      font-family:"Noto Sans TC", sans-serif;
+      font-weight:700;
+    }
+
+    .qa-items {
+      display:grid;
+      gap:12px;
+      padding:18px;
+    }
+
+    .qa-item {
+      border:1px solid rgba(19,33,59,0.1);
+      border-radius:16px;
+      background:#ffffff;
+      box-shadow:0 8px 22px rgba(35,42,68,0.06);
+    }
+
+    .qa-item summary {
+      position:relative;
+      display:block;
+      padding:18px 54px 18px 20px;
+      color:#111827;
+      font-size:17px;
+      font-weight:700;
+      line-height:1.55;
+      cursor:pointer;
+      list-style:none;
+    }
+
+    .qa-item summary::-webkit-details-marker {
+      display:none;
+    }
+
+    .qa-item summary::after {
+      content:"+";
+      position:absolute;
+      top:50%;
+      right:20px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:26px;
+      height:26px;
+      border-radius:50%;
+      background:#fff4ce;
+      color:#13213b;
+      font-size:20px;
+      font-weight:700;
+      transform:translateY(-50%);
+      box-shadow:inset 0 0 0 1px rgba(194,151,58,0.28);
+    }
+
+    .qa-item[open] summary::after {
+      content:"-";
+    }
+
+    .qa-answer {
+      padding:0 20px 20px;
+      color:#384152;
+      font-size:16px;
+      line-height:1.9;
+    }
+
+    .qa-answer p {
+      margin:0 0 12px;
+      color:#384152;
+      font-size:16px;
+      line-height:1.9;
+    }
+
+    .qa-answer p:last-child {
+      margin-bottom:0;
+    }
+
+    .qa-answer ol {
+      margin:10px 0 0;
+      padding-left:22px;
+    }
+
+    .qa-answer li {
+      margin-bottom:8px;
+      padding-left:4px;
+    }
+
+    .qa-answer li:last-child {
+      margin-bottom:0;
+    }
+
+    .cards {display:flex;flex-wrap:wrap;justify-content:center;gap:20px;margin-top:40px;}
+
+    .card {
+      background:white;padding:30px;border-radius:16px;width:220px;
+      box-shadow:0 8px 20px rgba(0,0,0,0.1);
+      cursor:pointer;transition:0.3s;
+    }
+
+    .card img {
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      margin-bottom:12px;
+      object-fit:cover;
+    }
+
+    .card:hover{transform:translateY(-10px) scale(1.05);}    
+
+    /* Modal */
+    .modal {
+      display:none;position:fixed;top:0;left:0;width:100%;height:100%;
+      background:rgba(0,0,0,0.7);justify-content:center;align-items:center;z-index:100;
+    }
+
+    .modal-content {
+      background:white;padding:40px;border-radius:20px;max-width:90%;text-align:center;
+      animation:zoomIn 0.3s ease;
+    }
+
+    .modal-content img {
+      display:block;
+      max-width:min(92vw, 1180px);
+      max-height:82vh;
+      width:auto;
+      height:auto;
+      object-fit:contain;
+      border-radius:12px;
+    }
+
+
+    @keyframes zoomIn{
+      from{transform:scale(0.5);opacity:0;} 
+      to{transform:scale(1);opacity:1;}
+    }
+
+    .close {margin-top:20px;padding:10px 20px;background:#ff8a00;color:white;border:none;border-radius:20px;cursor:pointer;}
+
+    .contact-note {
+      width:min(100%, 1180px);
+      max-width:1180px;
+      margin:26px auto 0;
+      padding:28px 32px;
+      box-sizing:border-box;
+      border-radius:24px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.96), rgba(255,250,240,0.9)),
+        radial-gradient(circle at 18% 0%, rgba(255,217,102,0.26), transparent 36%);
+      border:1px solid rgba(194,151,58,0.28);
+      box-shadow:0 20px 50px rgba(19,33,59,0.12), inset 0 1px 0 rgba(255,255,255,0.88);
+      color:#13213b;
+      text-align:center;
+    }
+
+    .contact-note p {
+      margin:0 0 14px;
+      color:#b42318;
+      font-size:18px;
+      line-height:1.7;
+      font-weight:700;
+    }
+
+    .contact-phone {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-width:220px;
+      padding:13px 24px;
+      border-radius:999px;
+      background:#13213b;
+      color:#fff7d7;
+      text-decoration:none;
+      font-size:22px;
+      font-weight:700;
+      letter-spacing:0.5px;
+      box-shadow:0 12px 28px rgba(19,33,59,0.22);
+      transition:transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .contact-phone-label {
+      color:#ffd966;
+      font-size:15px;
+      font-weight:800;
+    }
+
+    .contact-phone:hover {
+      transform:translateY(-2px);
+      box-shadow:0 16px 34px rgba(19,33,59,0.28);
+    }
+
+    .copyright {
+      margin:18px 0 0;
+      color:#6b7280;
+      font-size:14px;
+      line-height:1.6;
+      font-weight:600;
+    }
+
+    .ticket-guide {
+      width:min(100%, 1180px);
+      max-width:1180px;
+      margin:26px auto 0;
+      display:grid;
+      gap:18px;
+      box-sizing:border-box;
+      color:#182033;
+      text-align:left;
+    }
+
+    .ticket-hero {
+      position:relative;
+      overflow:hidden;
+      padding:30px 32px;
+      border-radius:24px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.98), rgba(255,250,240,0.92)),
+        radial-gradient(circle at 8% 0%, rgba(255,217,102,0.34), transparent 34%);
+      border:1px solid rgba(194,151,58,0.28);
+      box-shadow:0 22px 54px rgba(19,33,59,0.12), inset 0 1px 0 rgba(255,255,255,0.9);
+    }
+
+    .ticket-hero::before {
+      content:"";
+      position:absolute;
+      inset:14px;
+      border:1px solid rgba(194,151,58,0.16);
+      border-radius:18px;
+      pointer-events:none;
+    }
+
+    .ticket-kicker {
+      position:relative;
+      z-index:1;
+      display:inline-flex;
+      align-items:center;
+      margin:0 0 12px;
+      padding:6px 12px;
+      border-radius:999px;
+      background:#13213b;
+      color:#fff7d7;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .ticket-hero h3 {
+      position:relative;
+      z-index:1;
+      margin:0 0 12px;
+      font-size:30px;
+      line-height:1.25;
+      color:#111827;
+      font-family:"Noto Serif TC", serif;
+    }
+
+    .ticket-hero p {
+      position:relative;
+      z-index:1;
+      margin:0;
+      color:#384152;
+      font-size:16px;
+      line-height:1.8;
+    }
+
+    .ticket-steps {
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:16px;
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+
+    .ticket-step {
+      padding:24px 22px;
+      border-radius:20px;
+      background:#ffffff;
+      border:1px solid rgba(19,33,59,0.1);
+      box-shadow:0 14px 34px rgba(35,42,68,0.08);
+    }
+
+    .ticket-step strong {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin:0 0 10px;
+      color:#13213b;
+      font-size:18px;
+      line-height:1.45;
+    }
+
+    .ticket-step strong > span {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:30px;
+      height:30px;
+      border-radius:50%;
+      background:#fff4ce;
+      color:#13213b;
+      font-size:14px;
+      box-shadow:inset 0 0 0 1px rgba(194,151,58,0.28);
+      flex:0 0 auto;
+    }
+
+    .ticket-step p {
+      margin:0;
+      color:#4b5563;
+      font-size:15px;
+      line-height:1.75;
+      overflow-wrap:break-word;
+    }
+
+    .ticket-highlight {
+      display:block;
+      margin-top:8px;
+      padding:10px 12px;
+      border-left:4px solid #d9a735;
+      border-radius:10px;
+      background:linear-gradient(180deg, rgba(255,248,190,0.78) 0%, rgba(255,229,105,0.64) 100%);
+      color:#8a3b00;
+      font-weight:800;
+      line-height:1.65;
+      box-shadow:inset 0 0 0 1px rgba(217,167,53,0.2);
+    }
+
+    .ticket-step.is-wide {
+      grid-column:1 / -1;
+    }
+
+    .ticket-step.is-wide p {
+      max-width:900px;
+    }
+
+    .ticket-times {
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:16px;
+      padding:22px;
+      border-radius:22px;
+      background:#13213b;
+      box-shadow:0 18px 42px rgba(19,33,59,0.2);
+    }
+
+    .ticket-time-title {
+      grid-column:1 / -1;
+      margin:0 0 2px;
+      color:#fff7d7;
+      font-size:24px;
+      line-height:1.35;
+      font-family:"Noto Serif TC", serif;
+      letter-spacing:0;
+    }
+
+    .ticket-time {
+      padding:20px;
+      border-radius:16px;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,217,102,0.22);
+      color:#fff;
+    }
+
+    .ticket-time small {
+      display:block;
+      margin-bottom:8px;
+      color:#ffd966;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .ticket-time strong {
+      display:block;
+      margin-bottom:6px;
+      color:#fff7d7;
+      font-size:22px;
+      line-height:1.35;
+    }
+
+    .ticket-time p {
+      margin:0;
+      color:rgba(255,255,255,0.82);
+      font-size:15px;
+      line-height:1.7;
+    }
+
+    .ticket-price-card {
+      padding:26px 28px;
+      border-radius:22px;
+      background:linear-gradient(180deg, #ffffff, #fffaf0);
+      border:1px solid rgba(194,151,58,0.22);
+      box-shadow:0 16px 38px rgba(35,42,68,0.09);
+    }
+
+    .ticket-price-header {
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:18px;
+      padding-bottom:14px;
+      border-bottom:1px solid rgba(194,151,58,0.18);
+    }
+
+    .ticket-price-header h3 {
+      margin:0;
+      color:#13213b;
+      font-size:24px;
+      font-family:"Noto Serif TC", serif;
+    }
+
+    .ticket-price-header span {
+      color:#8a621a;
+      font-size:14px;
+      font-weight:700;
+      white-space:nowrap;
+    }
+
+    .ticket-zones {
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:14px;
+      margin-bottom:16px;
+    }
+
+    .ticket-zone {
+      padding:18px;
+      border-radius:16px;
+      background:#ffffff;
+      border:1px solid rgba(19,33,59,0.09);
+      box-shadow:0 10px 24px rgba(35,42,68,0.06);
+    }
+
+    .ticket-zone-title {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:12px;
+      flex-wrap:wrap;
+    }
+
+    .ticket-zone small {
+      display:block;
+      margin-bottom:8px;
+      color:#9a6b16;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .ticket-zone strong {
+      display:block;
+      color:#13213b;
+      font-size:18px;
+      line-height:1.45;
+    }
+
+    .ticket-zone span {
+      display:inline-flex;
+      padding:5px 10px;
+      border-radius:999px;
+      background:#fff4ce;
+      color:#5f3b00;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .ticket-zone p {
+      margin:0;
+      color:#4b5563;
+      font-size:15px;
+      line-height:1.7;
+    }
+
+    .ticket-seat-note {
+      margin:0;
+      padding:14px 16px;
+      border-radius:14px;
+      background:#f7f0df;
+      color:#b42318;
+      font-size:15px;
+      line-height:1.8;
+      font-weight:700;
+    }
+
+    .seat-map-link {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      margin:0 0 16px;
+      padding:12px 18px;
+      border-radius:999px;
+      background:#13213b;
+      color:#fff7d7;
+      text-decoration:none;
+      font-size:15px;
+      font-weight:700;
+      box-shadow:0 12px 28px rgba(19,33,59,0.18);
+      transition:transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .seat-map-link:hover {
+      transform:translateY(-2px);
+      box-shadow:0 16px 34px rgba(19,33,59,0.24);
+    }
+
+    .pickup-card {
+      padding:26px 28px;
+      border-radius:22px;
+      background:linear-gradient(180deg, #fffdf7, #ffffff);
+      border:1px solid rgba(194,151,58,0.22);
+      box-shadow:0 16px 38px rgba(35,42,68,0.09);
+    }
+
+    .pickup-card h3 {
+      margin:0 0 14px;
+      color:#13213b;
+      font-size:24px;
+      font-family:"Noto Serif TC", serif;
+    }
+
+    .pickup-card ul {
+      margin:0;
+      padding-left:20px;
+      color:#384152;
+      font-size:16px;
+      line-height:1.9;
+    }
+
+    .pickup-card li {
+      margin-bottom:6px;
+    }
+
+    .ticket-alert {
+      margin-top:16px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:#f7f0df;
+      color:#b42318;
+      font-size:15px;
+      line-height:1.7;
+      font-weight:700;
+    }
+
+    .ticket-fee-note {
+      color:#b42318;
+      font-weight:700;
+      text-decoration:underline;
+      text-decoration-thickness:2px;
+      text-underline-offset:4px;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        min-height:auto;
+        background-position:center top;
+        background-size:100% auto;
+        box-sizing:border-box;
+        padding:66vw 20px 42px;
+      }
+
+      .hero::after {
+        background:linear-gradient(180deg, rgba(6,17,57,0.02) 0%, rgba(6,17,57,0.2) 40%, rgba(6,17,57,0.9) 100%);
+      }
+
+      .hero-content {
+        display:block;
+        padding:0;
+        transform:none;
+      }
+
+      .hero-title {
+        max-width:none;
+        padding:20px 18px;
+        text-align:center;
+      }
+
+      .hero-title p {
+        text-align:center;
+      }
+
+      .quick-links {
+        grid-template-columns:repeat(2, 212px);
+        width:max-content;
+        max-width:100%;
+        margin:18px auto 0;
+        padding:10px;
+        transform:none;
+      }
+
+      .event-grid {
+        grid-template-columns:1fr;
+        max-width:560px;
+      }
+
+      .event-tile {
+        min-height:auto;
+      }
+
+      .event-map {
+        min-height:320px;
+      }
+
+      .panel {
+        padding:32px 24px;
+      }
+
+      .ticket-steps,
+      .ticket-times,
+      .ticket-zones {
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      header {
+        width:100vw;
+        left:0;
+        overflow:hidden;
+      }
+
+      .header-inner {
+        gap:12px;
+        width:100%;
+        max-width:none;
+        box-sizing:border-box;
+        padding:12px 16px;
+      }
+
+      header .logo {
+        transform:none;
+      }
+
+      header .logo img {
+        height:44px;
+        max-width:168px;
+      }
+
+      .header-btn {
+        position:absolute;
+        top:18px;
+        right:16px;
+        left:auto;
+        padding:8px 12px;
+        font-size:13px;
+      }
+
+      .hero {
+        padding-top:74vw;
+      }
+
+      .hero-title .eyebrow {
+        font-size:40px;
+      }
+
+      .hero-title h1 {
+        font-size:38px;
+        line-height:1.15;
+      }
+
+      .hero-title p {
+        font-size:16px;
+      }
+
+      .quick-links {
+        grid-template-columns:1fr;
+        width:min(232px, 100%);
+        margin:18px auto 0;
+        border-radius:18px;
+      }
+
+      .program-frame,
+      .seating-frame {
+        width:100%;
+        max-width:100%;
+        padding:10px;
+      }
+
+      .program-frame img,
+      .seating-frame img {
+        padding:6px;
+      }
+
+      .event-map {
+        min-height:300px;
+      }
+
+      .panel {
+        padding:28px 18px;
+        border-radius:20px;
+      }
+
+      #program > h2,
+      #ticket h2,
+      #rules .panel h2,
+      #qa .panel h2 {
+        margin-bottom:22px;
+        padding:0 8px 14px;
+        font-size:28px;
+        gap:10px;
+      }
+
+      #program > h2::before,
+      #program > h2::after,
+      #ticket h2::before,
+      #ticket h2::after,
+      #rules .panel h2::before,
+      #rules .panel h2::after,
+      #qa .panel h2::before,
+      #qa .panel h2::after {
+        width:28px;
+        height:1px;
+      }
+
+      .media-grid {
+        grid-template-columns:1fr;
+        gap:18px;
+      }
+
+      .media-card {
+        padding:16px;
+        border-radius:20px;
+      }
+
+      .media-card h3 {
+        font-size:24px;
+        margin-bottom:12px;
+      }
+
+      .media-card h3::before,
+      .media-card h3::after {
+        width:24px;
+      }
+
+      .ticket-hero,
+      .ticket-price-card,
+      .pickup-card {
+        padding:24px 20px;
+      }
+
+      .contact-phone {
+        width:100%;
+        min-width:0;
+        box-sizing:border-box;
+        padding:14px 16px;
+        font-size:20px;
+      }
+
+      .ticket-hero h3 {
+        font-size:25px;
+      }
+
+      .ticket-price-header {
+        align-items:flex-start;
+        flex-direction:column;
+        gap:8px;
+      }
+
+      .ticket-price-header span {
+        white-space:normal;
+      }
+
+      .ticket-times {
+        padding:16px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="brand"> </span>
+      <a href="https://www.chiender.bnet.tw/" target="_blank" rel="noopener noreferrer">
+        <img src="images/banner2.png" alt="成德菁英幼兒園">
+      </a>
+    </div>
+    <a class="header-btn" href="https://ticketplus.com.tw/activity/14fc4ac59dec23dbe0c386a800667bac" target="_blank" rel="noopener noreferrer">訂購票券</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-title">
+      <div class="eyebrow">2026</div>
+     <h1>
+時空之旅<br>
+音樂發表會
+</h1>
+      <p>穿越時光的旋律，記錄孩子成長的每一步。邀請您一同聆聽，最珍貴的回憶與感動。</p>
+    </div>
+  </div>
+  <div class="quick-links">
+    <a class="quick-card" href="#info">
+      <div class="quick-icon">📅</div>
+      <strong>活動資訊</strong>
+      <span class="quick-desc">
+        <span>日期、時間與地點</span>
+        <span class="desc-sub">一目瞭然</span>
+      </span>
+    </a>
+    <a class="quick-card" href="#program">
+      <div class="quick-icon">🎵</div>
+      <strong>節目內容</strong>
+      <span class="quick-desc">
+        <span>精彩節目</span>
+        <span class="desc-sub">搶先看</span>
+      </span>
+    </a>
+    <a class="quick-card" href="#seating">
+      <div class="quick-icon">🪑</div>
+      <strong>座位圖</strong>
+      <span class="quick-desc">
+        <span>座位分區</span>
+        <span class="desc-sub">位置查看</span>
+      </span>
+    </a>
+    <a class="quick-card" href="#rules">
+      <div class="quick-icon">📋</div>
+      <strong>入場規範</strong>
+      <span class="quick-desc">
+        <span>入場須知</span>
+        <span class="desc-sub">與注意事項</span>
+      </span>
+    </a>
+    <a class="quick-card" href="#qa">
+      <div class="quick-icon">❓</div>
+      <strong>Q&A</strong>
+      <span class="quick-desc">
+        <span>常見問題</span>
+        <span class="desc-sub">快速查詢</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+<section id="info" class="section">
+  <div class="event-grid">
+    <div class="event-tile">
+      <div class="event-kicker">EVENT</div>
+      <h2>活動資訊</h2>
+      <div class="event-list">
+        <div class="event-line">
+          <span class="event-icon">📅</span>
+          <span class="event-text"><strong>活動日期</strong>2026/07/05 (日)</span>
+        </div>
+        <div class="event-line">
+          <span class="event-icon">🎟️</span>
+          <span class="event-text"><strong>入場時間</strong>13:20</span>
+        </div>
+        <div class="event-line">
+          <span class="event-icon">🎵</span>
+          <span class="event-text"><strong>開演時間</strong>14:00</span>
+        </div>
+        <div class="event-line">
+          <span class="event-icon">🚪</span>
+          <span class="event-text"><strong>建議入口</strong>由『北二門』進入，搭乘21、22、23號景觀電梯直達3樓。</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="event-tile">
+      <div class="event-kicker">LOCATION</div>
+      <h2>活動地點</h2>
+      <div class="event-list">
+        <div class="event-line">
+          <span class="event-icon">📍</span>
+          <span class="event-text"><strong>會場</strong>新北市政府多功能集會堂</span>
+        </div>
+        <div class="event-line">
+          <span class="event-icon">🏢</span>
+          <span class="event-text"><strong>地址</strong>新北市板橋區中山路1段161號3樓</span>
+        </div>
+        <div class="event-line">
+          <span class="event-icon">🚗</span>
+          <span class="event-text"><strong>停車資訊</strong><span class="parking-line">可停放於</span><strong class="parking-name">新北市市民廣場地下停車場</strong><strong class="parking-name">或周邊停車場</strong><span class="parking-line">假日建議提早抵達。</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="event-tile event-map">
+      <iframe
+        src="https://www.google.com/maps?q=新北市政府多功能集會堂&output=embed"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+      <div class="event-map-label">
+        <strong>地圖位置</strong>
+        <span>新北市政府多功能集會堂 3 樓</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="program" class="section">
+  <h2>節目內容｜座位圖</h2>
+  <div class="media-grid">
+    <article class="media-card">
+      <h3>節目內容</h3>
+      <div class="program-frame">
+        <img src="images/2026時空之旅節目單更新確認版115.05.20.png" alt="2026時空之旅節目單更新確認版115.05.20" role="button" tabindex="0" onclick="openImageModal(this.src, this.alt)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageModal(this.src, this.alt);}">
+      </div>
+    </article>
+    <article id="seating" class="media-card">
+      <h3>座位圖</h3>
+      <div class="seating-frame">
+        <img src="images/seating.png" alt="座位圖" role="button" tabindex="0" onclick="openImageModal(this.src, this.alt)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openImageModal(this.src, this.alt);}">
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="ticket" class="section">
+  <h2>訂購票券</h2>
+  <div class="ticket-guide">
+    <div class="ticket-hero">
+      <div class="ticket-kicker">Ticket Plus 遠大售票系統</div>
+      <h3>請先完成帳號註冊與手機驗證</h3>
+    </div>
+
+    <ol class="ticket-steps" aria-label="訂購票券流程">
+      <li class="ticket-step">
+        <strong><span>1</span>註冊售票帳號</strong>
+        <p>請先註冊 Ticket Plus 遠大售票系統帳號，以利後續進行票券選購。</p>
+      </li>
+      <li class="ticket-step">
+        <strong><span>2</span>完成手機驗證</strong>
+        <p>手機號碼務必完成驗證，通過驗證後才可於系統內購票。</p>
+      </li>
+      <li class="ticket-step">
+        <strong><span>3</span>輸入兌換序號</strong>
+        <p>於購票頁面輸入幼兒「身分證字號英文字母＋後六碼數字」作為兌換序號，例如 A123456789 請輸入「A456789」，依開放時間兌換指定區域票券。(兩階段售票皆為相同序號)</p>
+      </li>
+    </ol>
+
+    <div class="ticket-times" aria-label="購票時間">
+      <h3 class="ticket-time-title">購票時間</h3>
+      <div class="ticket-time">
+        <small>兩張同行票開放</small>
+        <strong>115.05.30（六）11:00</strong>
+        <p>開售「時光啟程區」與「時光穿越區」票券選購。</p>
+      </div>
+      <div class="ticket-time">
+        <small>第三張票券開放</small>
+        <strong>115.05.30（六）13:00</strong>
+        <p>開售「時光加乘區」第三張票券選購。</p>
+      </div>
+    </div>
+
+    <div class="ticket-price-card" aria-label="票價與座位分區">
+      <div class="ticket-price-header">
+        <h3>票價｜座位分區</h3>
+      </div>
+      <div class="ticket-zones">
+        <div class="ticket-zone">
+          <small>同行票</small>
+          <div class="ticket-zone-title">
+            <strong>時光啟程區</strong>
+            <span>不收費</span>
+          </div>
+          <p>第 1 排～第 20 排。</p>
+        </div>
+        <div class="ticket-zone">
+          <small>同行票</small>
+          <div class="ticket-zone-title">
+            <strong>時光穿越區</strong>
+            <span>不收費</span>
+          </div>
+          <p>第 21 排～第 31 排。</p>
+        </div>
+        <div class="ticket-zone">
+          <small>第三張加購票</small>
+          <div class="ticket-zone-title">
+            <strong>時光加乘區</strong>
+            <span>不收費</span>
+          </div>
+          <p>第 32 排～第 35 排。</p>
+        </div>
+      </div>
+      <a class="seat-map-link" href="https://www.sec.ntpc.gov.tw/userfiles/0021600/files/%E5%A4%9A%E5%8A%9F%E8%83%BD%E9%9B%86%E6%9C%83%E5%A0%82%E5%BA%A7%E4%BD%8D%E5%9C%96.pdf" target="_blank" rel="noopener noreferrer">查看座位區參考圖</a>
+      <p class="ticket-seat-note">※ 因第八排座位 16～18 號為攝影區，可能遮蔽第九排部分視線，請家長選購時留意視線遮蔽情形。</p>
+    </div>
+
+    <div class="pickup-card">
+      <h3>取票方式</h3>
+      <ul>
+        <li>請至 7-11 超商 ibon 機台，選擇 Ticket Plus 遠大售票系統取票。</li>
+        <li>輸入「手機號碼」與「取票號碼」取得取票憑證後，請於 10 分鐘內至櫃檯領取票券。</li>
+        <li><span class="ticket-fee-note">取票手續費為每筆 NT$30，請於超商櫃檯取票時支付。</span></li>
+      </ul>
+      <div class="ticket-alert">※ 每筆訂單皆需收取取票手續費，請務必確認欲選購的節目皆已完成後，再執行結帳，以免重複支付手續費。</div>
+    </div>
+  </div>
+</section>
+
+<section id="rules" class="section">
+  <div class="panel">
+    <h2>入場規範</h2>
+    <p>禁止攜帶外食、飲料及危險物品，請依照以下注意事項共同維護活動秩序與觀賞品質。</p>
+    <ol class="rules-list">
+      <li>本活動全程配合線上直播及現場活動錄影；若有錄影及拍攝之需求，請勿高舉超過胸前高度，以免影響他人觀看演出。</li>
+      <li>本節目禁止攜帶外食、飲料及任何金屬、玻璃、寶特瓶容器、雷射筆、LED燈、煙火或其他危險物品入場；如經查驗發現，須於入口處丟棄或放置，另嬰幼兒推車及收納推車也禁止入場，須於入口放置，以上物品主辦單位不負保管責任。</li>
+      <li>為維護活動整體形象，當天請勿穿著短褲及拖鞋入場。</li>
+      <li>各表演場館各有其入場規定，請持票人遵守之，遲到觀眾需遵守館方管制。</li>
+      <li>相關規定以校方及現場公告為主，主辦單位保留修改、終止及本活動相關演出內容之權利。</li>
+      <li>若有任何形式非供自用而加價轉售（無論加價名目為代購費、交通費、補貼等均包含在內）之情事經查屬實者，將依社會秩序維護法第64條第2款逕向警方檢舉。</li>
+      <li>購票前請詳閱注意事項，一旦購票成功視為同意上述所有活動注意事項。</li>
+    </ol>
+  </div>
+</section>
+
+<section id="qa" class="section">
+  <div class="panel">
+    <h2>Q&A</h2>
+    <div class="qa-list">
+      <section class="qa-category">
+        <div class="qa-category-title">一、票券相關 <span>Tickets</span></div>
+        <div class="qa-items">
+          <details class="qa-item" open>
+            <summary>Q1：正在校內就讀的幼兒可以有幾張票?</summary>
+            <div class="qa-answer">
+              <p>A1：一位幼兒配發「兩張同行票」，請於開放選購時選擇區域（時光啟程區或時光穿越區）進行選購，並依所選區域對號入座。</p>
+            </div>
+          </details>
+          <details class="qa-item">
+            <summary>Q2：請問本次票券需要收費嗎？</summary>
+            <div class="qa-answer">
+              <p>A2：本次音樂會票券採兌換方式，不需支付票價；惟至7-11超商 ibon 機台取票時，需另支付取票手續費。</p>
+              <p>取票方式：</p>
+              <p>請至7-11超商 ibon 機台輸入兌換序號完成取票，每筆手續費為 $30（每筆限兌換 2 張票券），並於門市以現金支付。</p>
+            </div>
+          </details>
+          <details class="qa-item">
+            <summary>Q3：幾歲以上的幼兒需要買票?嬰兒可以入場嗎？</summary>
+            <div class="qa-answer">
+              <p>A3：5歲以下/身高110公分以下，需由家長陪同入場，並與家長一同入座（不另提供座位）；6歲以上/身高110公分以上一人一票，憑票入場。票券視同有價證券，請妥善保存。</p>
+              <p>嬰兒不開放入場，敬請見諒。</p>
+            </div>
+          </details>
+          <details class="qa-item">
+            <summary>Q4：如果想要第三張票怎麼辦?</summary>
+            <div class="qa-answer">
+              <p>A4：如有第三張票需求之家長，請於「時光加乘區」開放時另行選購「一張加購票」，並依規定安排於該區域對號入座；數量有限售完為止。</p>
+            </div>
+          </details>
+          <details class="qa-item">
+            <summary>Q5：請問加購的第三張票可以改坐到「時光啟程區」或「時光穿越區」嗎？</summary>
+            <div class="qa-answer">
+              <p>A5：不好意思，因本活動採對號入座，座位已依票券安排，無法更換至其他區域，還請見諒。</p>
+            </div>
+          </details>
+          <details class="qa-item">
+            <summary>Q6：請問是否還能再提供額外的票券呢？</summary>
+            <div class="qa-answer">
+              <p>A6：不好意思，由於場地座位有限，目前無法再增加票券，還請您見諒。您可以詢問看看是否有其他家長有多的票券，或是邀請家人在家透過直播一起參與。</p>
+            </div>
+          </details>
+          <details class="qa-item">
+            <summary>Q7：如果其他家長有多的票券，可以跟他索取嗎？</summary>
+            <div class="qa-answer">
+              <p>A7：可以。家長之間可自行協調票券轉讓，但請務必遵守以下事項：</p>
+              <ol>
+                <li>票券轉讓需由雙方家長自行聯繫與約定，校方及老師不代為處理或轉交票券。</li>
+                <li>票券僅限「無償轉讓」，不得加價轉售或涉及任何金錢交易，請勿與對方達成相關約定。</li>
+                <li>票券僅限提供給本園幼兒之家長或親屬使用，不得轉讓給與幼兒無關之人士入場。</li>
+                <li>請務必確認對方家長的班級及孩童姓名，以利必要時聯繫與管理。</li>
+                <li>若轉讓票券後，實際入座者於該座位區域造成髒汙或相關狀況，原持票家長仍需負責後續處理與清潔，請務必審慎評估轉讓對象。</li>
+              </ol>
+            </div>
+          </details>
+          <details class="qa-item">
+            <summary>Q8：為什麼今年改為採用線上選購票券？未來也會持續使用此方式嗎？</summary>
+            <div class="qa-answer">
+              <p>A8：為體恤家長以往需提早到場排隊購票，耗費較多時間與精力，今年特別改採線上選購方式，以減少現場排隊及人潮擁擠情形。</p>
+              <p>同時，此舉亦可避免因現場排隊作業而延長場地使用時間，減少對加班公務人員之影響，讓整體活動運作更為順暢。校方也能將更多心力專注於活動內容與舞台呈現，提供更完善的演出品質。</p>
+              <p>透過線上購票，家長可更從容安排入場時間，安心觀賞演出。</p>
+              <p>未來是否持續採用此方式，將視本次實施狀況及整體回饋評估；若運作良好，將優先考慮延續此購票方式。</p>
+            </div>
+          </details>
+          <details class="qa-item">
+            <summary>Q9：為什麼會有「不得加價轉售票券」的規定？</summary>
+            <div class="qa-answer">
+              <p>A9：此規定主要是為了維護活動的公平性與避免衍生不必要的糾紛。</p>
+              <p>若開放加價轉售，可能會造成票券被囤積或轉售牟利，影響其他家長權益，也容易產生金錢交易相關的爭議。</p>
+              <p>另外，依據 社會秩序維護法第64條第2款 規定，若有非供自用而加價轉售票券之情形，經查證屬實，可能涉及違法，需由相關單位處理。</p>
+              <p>因此本園規定票券僅限「無償轉讓」，不涉及任何形式的加價或金錢交易，敬請家長配合，共同維護良好的活動品質與秩序。</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="qa-category">
+        <div class="qa-category-title">二、飲食相關 <span>Food & Drinks</span></div>
+        <div class="qa-items">
+          <details class="qa-item">
+            <summary>Q1：請問可以攜帶食物和飲料進場嗎？我會注意不打翻，可以嗎？</summary>
+            <div class="qa-answer">
+              <p>A1：因場地方有相關規定，會場內禁止攜帶任何飲食（飲用水除外），還請您見諒。過去曾發生飲料或食物不慎打翻的情況，導致需要額外清潔甚至產生罰款。為維護場地整潔與活動品質，敬請家長配合相關規定，感謝您的理解與支持。</p>
+            </div>
+          </details>
+          <details class="qa-item">
+            <summary>Q2：若於活動結束後發現有飲食打翻情形，將如何處理？</summary>
+            <div class="qa-answer">
+              <p>A2：若於活動結束後發現相關情況，校方將依現場紀錄及票券資料確認座位區域，並聯繫相關家長說明情形；如有產生清潔費用或場地方罰款，將請當事人協助負擔。</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="qa-category">
+        <div class="qa-category-title">三、其他問題 <span>Others</span></div>
+        <div class="qa-items">
+          <details class="qa-item">
+            <summary>Q1：現場是否有座位指引？</summary>
+            <div class="qa-answer">
+              <p>A1：會場及每個入口都有指引人員及座位區標示，請依照工作人員指示入座。</p>
+            </div>
+          </details>
+          <details class="qa-item">
+            <summary>Q2：遲到會怎麼處理？</summary>
+            <div class="qa-answer">
+              <p>A2：遲到觀眾需遵守館方管制，並出示票券由工作人員帶領入場。</p>
+            </div>
+          </details>
+          <details class="qa-item">
+            <summary>Q3：為什麼不能帶嬰幼兒推車或收納推車進場？可以通融嗎？</summary>
+            <div class="qa-answer">
+              <p>A3：因場地與安全考量，嬰幼兒推車及收納推車皆不開放入場，且無法提供例外，敬請見諒。建議可改以背包或手提方式攜帶物品，以利入場與觀賞。</p>
+            </div>
+          </details>
+          <details class="qa-item">
+            <summary>Q4：為什麼不能穿短褲或拖鞋入場？</summary>
+            <div class="qa-answer">
+              <p>A4：本次活動為正式演出，為維護整體觀演品質與活動氛圍，敬請來賓配合穿著整齊入場。短褲與拖鞋較偏休閒，與活動性質較不相符，還請見諒與配合。</p>
+            </div>
+          </details>
+          <details class="qa-item">
+            <summary>Q5：請問直播和錄影的片段什麼時候會提供？</summary>
+            <div class="qa-answer">
+              <p>A5：活動結束後，廠商將進行影片整理與剪輯，會盡快提供連結給家長，屆時會另行通知相關資訊。</p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<footer class="section">
+  <div class="contact-note" aria-label="聯絡資訊">
+    <p>如有任何疑問，請與我們聯繫</p>
+    <p>有關於班務之問題，請和班導師聯繫</p>
+    <a class="contact-phone" href="tel:0222036555" aria-label="撥打電話 02-2203-6555"><span class="contact-phone-label">撥打電話</span>02-2203-6555</a>
+    <div class="copyright">成德菁英幼兒園版權所有© 2026 ChienDer Kindergarten All Rights Reserved.</div>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <div id="modalText"></div>
+    <button class="close" onclick="closeModal()">關閉</button>
+  </div>
+</div>
+
+<script>
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+function openModal(text){
+  const modal = document.getElementById('modal');
+  document.getElementById('modalText').innerText=text;
+  modal.style.display='flex';
+}
+
+function openImageModal(src, alt){
+  const modal = document.getElementById('modal');
+  document.getElementById('modalText').innerHTML=`<img src="${src}" alt="${alt}">`;
+  modal.style.display='flex';
+}
+
+function closeModal(){
+  const modal = document.getElementById('modal');
+  modal.style.display='none';
+  document.getElementById('modalText').innerHTML='';
+}
+</script>
+
+</body>
+</html>
